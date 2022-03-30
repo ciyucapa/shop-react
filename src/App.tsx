@@ -1,11 +1,11 @@
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      hola!!!
+
+const Dashboard = () => {
+  return(
+    <div>HOME
     </div>
-  );
+  )
 }
 
-export default App;
+export default Dashboard;
