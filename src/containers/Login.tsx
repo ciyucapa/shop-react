@@ -7,10 +7,10 @@ const Login = () => {
                 <h3>Create a new password</h3>
                 <p>Enter a new password for your account</p>
                 <form>
-                    <label>Email address
+                    <label>Password
                         <input type="text" placeholder="email"/>
                     </label>
-                    <label>Password
+                    <label>Re-enter Password
                         <input type="text" placeholder="password"/>
                     </label>
                     <button type="submit">Confirm</button>

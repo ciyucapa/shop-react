@@ -36,7 +36,7 @@
     border: none;
     padding: 8px 5px;
     outline: none;
-    background-color: rgb(236, 233, 233);
+    background-color: var(--text-input-field);
     color: gray;
     font-size: var(--ss);
 }
@@ -44,10 +44,10 @@
 .login__container--box form button {
     border-radius: 5px;
     padding: 10px;
-    background-color: rgba(71, 240, 169, 0.993);
+    background-color: var(--hospital-green);
     color: white;
     font-size: var(--md);
     border: none;
+    width: 100%;
 }
-
 
