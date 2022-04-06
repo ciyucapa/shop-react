@@ -1,5 +1,5 @@
-import '../styles/recoveryPassword.css'
-import Assets from '../assets/assets';
+import '../../styles/recoveryPassword.css'
+import Assets from '../../assets/assets';
 
 const RecoveryPassword = () => {
     return (

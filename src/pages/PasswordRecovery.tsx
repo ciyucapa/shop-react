@@ -1,5 +1,7 @@
+import RecoveryPassword from "../components/RecoveryPassword/RecoveryPassword"
+
 const PasswordRecovery = () => {
-    return <div>PasswordRecovery</div>
+    return <RecoveryPassword/>
 }
 
 export default PasswordRecovery

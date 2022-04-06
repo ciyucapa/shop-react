@@ -1,5 +1,7 @@
-const NewPassword = () => {
-    return <div>NewPassword</div>
+import NewPassword from "../components/NewPassword/NewPassword"
+
+const NewPasswordContainer = () => {
+    return <NewPassword/>
 }
 
-export default NewPassword
+export default NewPasswordContainer

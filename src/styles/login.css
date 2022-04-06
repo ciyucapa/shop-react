@@ -41,7 +41,7 @@
     font-size: var(--ss);
 }
 
-.login__container--box form button {
+.login__container--box form button, .login__container--box button {
     border-radius: 5px;
     padding: 10px;
     background-color: var(--hospital-green);
@@ -49,5 +49,11 @@
     font-size: var(--md);
     border: none;
     width: 100%;
+}
+
+.login__container--box a {
+    text-decoration: none;
+    color: var(--hospital-green);
+    margin: 20px 0;
 }
 

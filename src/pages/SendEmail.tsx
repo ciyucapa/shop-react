@@ -1,5 +1,7 @@
+import SendEmail from "../components/SendEmail"
+
 const SendEmails = () => {
-    return <div>SendEmails</div>
+    return <SendEmail/>
 }
 
 export default SendEmails

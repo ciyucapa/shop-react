@@ -1,0 +1,26 @@
+.orderItem__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.orderItem__container--box {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 30%;
+    align-items: center;
+}
+
+.orderItem__container--sectionone {
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.orderItem__container--sectionone img {
+    margin-right: 20px;
+}

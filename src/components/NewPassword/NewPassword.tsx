@@ -1,24 +1,23 @@
-import '../../styles/login.css';
-import { Link } from 'react-router-dom';
+import '../../styles/login.css'
 
-const Login = () => {
+const NewPassword = () => {
     return (
         <div className='login__container'>
             <div className='login__container--box'>
+                <h3>Create a new password</h3>
+                <p>Enter a new password for your account</p>
                 <form>
-                    <label>Email address
+                    <label>Password
                         <input type="text" placeholder="email"/>
                     </label>
-                    <label>Password
+                    <label>Re-enter Password
                         <input type="text" placeholder="password"/>
                     </label>
-                    <button type="submit">Login</button>
+                    <button type="submit">Confirm</button>
                 </form>
-                <Link to={"/recovery"}>Forgot my password</Link>
-                <Link to={"/my-account"}><button>Sign up</button></Link>
             </div>
         </div>
     );
 };
 
-export default Login
+export default NewPassword
