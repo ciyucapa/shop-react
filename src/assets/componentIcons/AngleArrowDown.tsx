@@ -1,5 +1,9 @@
-const AngleArrowDown = () => (
-    <>
+interface AngleProps {
+    onClick?: () => void
+}
+
+const AngleArrowDown = ({onClick}: AngleProps): JSX.Element => (
+    <div onClick={onClick}>
         <svg 
             version="1.1" 
             id="Capa_1" 
@@ -16,7 +20,7 @@ const AngleArrowDown = () => (
 		c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/>
             </g>
         </svg>
-    </>
+    </div>
 );
 
 export default AngleArrowDown;
