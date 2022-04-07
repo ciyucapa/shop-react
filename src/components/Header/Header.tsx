@@ -21,7 +21,7 @@ const Header = () =>  {
                 <span className='header__email'>
                     <p>cindycaceres134@gmail.com</p>
                     <AngleArrowDown onClick={onVisible}/>
-                    {visible ? <Menu/> : ''}
+                    {visible && <Menu/>}
                 </span>
                 <ShoppingToCart/>
             </div>
