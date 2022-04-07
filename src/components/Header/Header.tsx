@@ -1,6 +1,9 @@
-import Logo from '../atomos/Logo';
-import Navbar from '../atomos/Navbar';
 import './header.css'
+
+import Logo from '../atomos/Logo/Logo';
+import Navbar from '../atomos/Navbar/Navbar';
+import ShoppingToCart from '../../assets/componentIcons/ShoppingToCart';
+import AngleArrowDown from '../../assets/componentIcons/AngleArrowDown';
 
 const Header = () =>  {
     return(
@@ -11,7 +14,11 @@ const Header = () =>  {
             </div>
             <div className='header__container--sectionthree'>
                 <span>Sign in</span>
-                <img/>
+                <span className='header__email'>
+                    <p>cindycaceres134@gmail.com</p>
+                    <AngleArrowDown/>
+                </span>
+                <ShoppingToCart/>
             </div>
 
         </nav>

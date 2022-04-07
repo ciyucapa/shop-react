@@ -1,3 +1,4 @@
+import ButtonField from '../atomos/ButtonField/Button';
 import './index.css'
 
 const ProductInfo = () => {
@@ -8,10 +9,7 @@ const ProductInfo = () => {
                 <p>$120.00</p>
                 <p>Retro Refrigerator</p>
                 <p>With its practical position, this bike also fulfills a decorative function, add your hall or workspace</p>
-                <button>
-                    <img/>
-                    Add to cart
-                </button>
+                <ButtonField text='Add to cart' isIcon={true} />
             </div>
         </>
     )
