@@ -15,8 +15,14 @@ const useGetProduct = () => {
         getProduct()
     }, [])
 
+    const product = products.filter((product : any) => {
+        if(product.images[0]) {
+            return product
+        }
+    })
+
     return {
-        products
+        product
     }
 };
 
