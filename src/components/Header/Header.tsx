@@ -7,9 +7,13 @@ import Navbar from '../atomos/Navbar/Navbar';
 import ShoppingToCart from '../../assets/componentIcons/ShoppingToCart';
 import AngleArrowDown from '../../assets/componentIcons/AngleArrowDown';
 import Menu from '../Menu/Menu';
+import { useContext } from 'react';
+import AppContext from '../../context';
 
 const Header = () =>  {
-    const {onVisible, visible} = useVisible()
+    const {onVisible, visible} = useVisible();
+    const {state: {cart}} = useContext(AppContext)
+    
     return(
         <nav className='header__container'>
             <div className='header__container--sectionone'>
@@ -25,7 +29,7 @@ const Header = () =>  {
                 </span>
                 <div className='header__cart'>
                     <ShoppingToCart/>
-                    <div className='header__cart--text'>2</div>
+                    <div className='header__cart--text'>{cart.length}</div>
                 </div>
             </div>
 

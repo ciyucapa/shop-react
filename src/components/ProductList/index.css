@@ -1,0 +1,13 @@
+.productList__container {
+}
+
+.productList__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.colum {
+    
+}

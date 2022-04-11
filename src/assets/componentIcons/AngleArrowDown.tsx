@@ -1,8 +1,6 @@
-interface AngleProps {
-    onClick?: () => void
-}
+import {ClickProps} from '../../interfaces'
 
-const AngleArrowDown = ({onClick}: AngleProps): JSX.Element => (
+const AngleArrowDown = ({onClick}: ClickProps): JSX.Element => (
     <div onClick={onClick}>
         <svg 
             version="1.1" 

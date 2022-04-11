@@ -1,15 +1,14 @@
-//import Assets from "../assets/assets"
 import ButtonField from "../components/atomos/ButtonField/Button"
-import CartMas from "../assets/componentIcons/CartMas"
-import ProductItem from "../components/productItem"
+import ProductList from "../components/ProductList"
+import useGetProduct from "../hooks/useGetProduct"
 
 const Home = () => {
+    const {products} = useGetProduct()
     return(
         <div>
             <h1>Titulo</h1>
             <ButtonField text="BOTON" isIcon={true}  />
-            <ProductItem/>
-            <ProductItem/>
+            <ProductList products={products}/>
         </div>
     )
 }

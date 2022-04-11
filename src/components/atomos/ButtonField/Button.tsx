@@ -1,11 +1,6 @@
 import './index.css'
 import CartMas from '../../../assets/componentIcons/CartMas'
-
-interface ButtonProps {
-    text: string
-    isIcon?: boolean
-    onClick?: () => void
-}
+import {ButtonProps} from '../../../interfaces/index'
 
 const ButtonField = ({text, isIcon, onClick}: ButtonProps): JSX.Element => (
     <div className="button__container" onClick={onClick}>
