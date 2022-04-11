@@ -1,14 +1,17 @@
 .product__container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 5px;
-    margin: 10px;
+    margin: 10px 10px;
+    border-radius: 10px;
+    align-items: center;
+    align-content: center;
+    width: 200px;
+    height: 270px;
 }
 
 .product__container img {
-   width: 180px;
-   height: 180px;
+   width: 200px;
+   height: 200px;
    border-radius: 10px;
 }
 
@@ -17,13 +20,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 180px;
+    width: 200px;
 }
 
 .product__info svg {
-    width:  30px;
-    height: 30px;
-    border-radius: 15px;
+    width:  20px;
+    height: 20px;
+    border-radius: 10px;
     background-color: var(--hospital-green);
     fill: #fff;
     padding: 2px;
@@ -32,7 +35,6 @@
 .product__info--p {
     display: flex;
     flex-direction: column;
-    text-align: left;
 }
 
 .product__info--title {
