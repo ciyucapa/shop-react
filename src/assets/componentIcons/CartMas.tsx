@@ -1,5 +1,9 @@
-const cartMas = () => (
-	<>
+interface CartProps {
+	onClick?: () => void
+}
+
+const CartMas = ({onClick} : CartProps): JSX.Element => (
+	<div onClick={onClick}>
 		<svg
 			version="1.1"
 			id="Capa_1"
@@ -31,7 +35,7 @@ const cartMas = () => (
 				</g>
 			</g>
 		</svg>
-	</>
+	</div>
 );
 
-export default cartMas
+export default CartMas

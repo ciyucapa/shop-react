@@ -56,3 +56,19 @@
     height: 10px;
     margin-left: 0;
 }
+
+.header__cart {
+    display: flex;
+}
+
+.header__cart--text {
+    font-size: 10px;
+    text-align: center;
+    background-color: var(--hospital-green);
+    border-radius: 7.5px;
+    width: 15px;
+    height: 15px;
+    position:absolute;
+    top: 5px;
+    right: 35px;
+}

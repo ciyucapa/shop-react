@@ -23,7 +23,10 @@ const Header = () =>  {
                     <AngleArrowDown onClick={onVisible}/>
                     {visible && <Menu/>}
                 </span>
-                <ShoppingToCart/>
+                <div className='header__cart'>
+                    <ShoppingToCart/>
+                    <div className='header__cart--text'>2</div>
+                </div>
             </div>
 
         </nav>
