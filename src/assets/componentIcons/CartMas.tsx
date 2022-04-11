@@ -1,8 +1,6 @@
-interface CartProps {
-	onClick?: () => void
-}
+import { ClickProps } from "../../interfaces";
 
-const CartMas = ({onClick} : CartProps): JSX.Element => (
+const CartMas = ({onClick} : ClickProps): JSX.Element => (
 	<div onClick={onClick}>
 		<svg
 			version="1.1"

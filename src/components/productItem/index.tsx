@@ -1,16 +1,9 @@
-import { useState } from "react";
-import CartMas from "../../assets/componentIcons/CartMas";
-import Assets from "../../assets/assets";
 import './index.css'
+import CartMas from "../../assets/componentIcons/CartMas";
+import { useState } from "react";
+import {ProductItemProps} from '../../interfaces'
 
-interface ProductItemProps {
-    id: number
-    price: number
-    title: string
-    image: string
-}
-
-const ProductItem = ({id, price, title, image}: ProductItemProps) => {
+const ProductItem = ({id, price, title, images}: ProductItemProps) => {
     const [cart, setCart] = useState([]);
 
     const handleCart = () => {
@@ -22,7 +15,7 @@ const ProductItem = ({id, price, title, image}: ProductItemProps) => {
     return (
         <div className="product__container" key={id}>
             <div>
-                <img src={image} alt="product" />
+                <img src={images} alt="product" />
             </div>
             <div className="product__info">
                 <span className="product__info--p">
