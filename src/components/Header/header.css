@@ -1,45 +1,74 @@
 .header__container {
-    background-color: red;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    padding: 10px 0;
+    
+    -webkit-box-shadow: 0px 4px 8px -3px rgba(135,135,135,1);
+    -moz-box-shadow: 0px 4px 8px -3px rgba(135,135,135,1);
+    box-shadow: 0px 4px 8px -3px rgba(135,135,135,1);
 }
 
 .header__container--sectionone{
     display: flex;
     width: 60%;
-    justify-content: space-around;
+    justify-content: left;
+    margin-left: 20px;
 }
 
-.header__container--section--one {
-    background-color: aqua;
-    display: flex;
-    align-items: center;
-}
-
-    .header__container--section--one p {
-        margin: 0 10px;
-    }
-
-.header__container--section--two {
-    background-color: pink;
-    display: flex;
-    align-items: center;
-}
-
-    .header__container--section--two ul {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .header__container--section--two ul li {
-        list-style: none;
-        margin: 0 20px;
-    }
 
 .header__container--sectionthree {
-    background-color: aqua;
     width: 40%;
     display: flex;
     justify-content: right;
+    align-items: center;
+    margin-right: 30px;
+    padding: 0 10px;
+}
+
+.header__container--sectionthree .header__sign {
+    color: var(--hospital-green);
+    font-size: var(--sm);
+    font-weight: 600;
+}
+
+.header__container--sectionthree svg {
+    fill: gray;
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+}
+
+.header__email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__email p {
+    color: gray;
+    font-weight: 400;
+    margin-right: 5px;
+    font-size: smaller;
+}
+
+.header__email svg {
+    width: 10px;
+    height: 10px;
+    margin-left: 0;
+}
+
+.header__cart {
+    display: flex;
+}
+
+.header__cart--text {
+    font-size: 10px;
+    text-align: center;
+    background-color: var(--hospital-green);
+    border-radius: 7.5px;
+    width: 15px;
+    height: 15px;
+    position:absolute;
+    top: 5px;
+    right: 35px;
 }

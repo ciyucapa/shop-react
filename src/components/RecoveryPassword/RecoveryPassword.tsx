@@ -1,5 +1,6 @@
 import '../../styles/recoveryPassword.css'
 import Assets from '../../assets/assets';
+import ButtonField from '../atomos/ButtonField/Button';
 
 const RecoveryPassword = () => {
     return (
@@ -10,7 +11,7 @@ const RecoveryPassword = () => {
                 <div className='recovery__image--container'>
                     <img className='recovery__image' src={Assets.emailIcon} alt='email' />
                 </div>
-                <button className="recovery__button" >Login</button>
+                <ButtonField text='Login' isIcon={false} />
                 <p className='recovery__resend'>
                     <span>Didn´t receive the email?</span>
                     <a href="/">Resend</a>
