@@ -15,7 +15,9 @@ export interface ProductItemProps {
     price: number
     title: string
     images: string
+    product?: {}
 }
+
 
 export interface LayoutProps {
     children: ReactNode 

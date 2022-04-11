@@ -8,11 +8,17 @@ const ProductList = ({products}: ProductListProps) => {
     return (
         <section className="productList__container">
             <div className="productList__list">
-                {products.map(({id, title, price, images}) => (
-                        <div className="colum" key={id}>
-                            <ProductItem id={id} price={price} title={title} images={images[0]} />
-                        </div>
-                    ))}
+                {products.map((product) => (
+                    <div className="colum" key={product.id}>
+                        <ProductItem 
+                            id={product.id} 
+                            price={product.price} 
+                            title={product.title} 
+                            images={product.images[0]} 
+                            product={product}
+                        />
+                    </div>
+                ))}
             </div>
         </section>
     )
