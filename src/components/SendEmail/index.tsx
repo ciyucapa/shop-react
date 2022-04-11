@@ -1,6 +1,7 @@
 import './index.css'
 import Assets from '../../assets/assets';
 import { Link } from 'react-router-dom';
+import ButtonField from '../atomos/ButtonField/Button';
 
 const SendEmail = () => {
     return (
@@ -11,7 +12,7 @@ const SendEmail = () => {
                 <div className='sendEmail__image--container'>
                     <img className='sendEmail__image' src={Assets.emailIcon} alt='email' />
                 </div>
-                <button>Login</button>
+                <ButtonField text='Login' isIcon={false} />
                 <p className='sendEmail__resend'>
                     <span>Didn´t receive the email? </span>
                     <Link to={"/recovery"}>Resend</Link>

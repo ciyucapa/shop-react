@@ -1,0 +1,19 @@
+.logo__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 10px;
+    padding-left: 10px;
+}
+
+.logo__container svg {
+    fill: gray;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.logo__title--one {
+    color: var(--hospital-green);
+    margin-right: 10px;
+}
