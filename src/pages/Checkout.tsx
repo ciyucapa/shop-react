@@ -14,7 +14,7 @@ const Checkout = () => {
                         <p>$560.000</p>
                     </div>
                 </div>
-                <OrderItem/>
+               
             </div>
         </div>
     )

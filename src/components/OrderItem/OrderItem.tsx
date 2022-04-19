@@ -1,16 +1,16 @@
 import './index.css'
-import Assets from '../../assets/assets'
+import { ProductItemProps } from '../../interfaces';
 
-const OrderItem = () => {
+const OrderItem = ({id, images, price, title}:ProductItemProps) => {
     return(
-        <div className='orderItem__container'>
+        <div className='orderItem__container' key={id}>
             <div className='orderItem__container--box'>
                 <div className='orderItem__container--sectionone'>
-                    <img src={Assets.emailIcon} alt="producto" />
-                    <p>Round Shelf</p>
+                    <img src={images} alt="producto" />
+                    <p>{title}</p>
                 </div>
                 <div className='orderItem__container--sectiontwo'>
-                    <p>$ 120.00</p>
+                    <p>$ {price}</p>
                 </div>
             </div>
         </div>

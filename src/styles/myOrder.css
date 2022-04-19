@@ -1,0 +1,44 @@
+.container__myorder {
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 25px 15px;
+    position: absolute;
+    top: 48px;
+    right: 0px;
+    width: 400px;
+    -webkit-box-shadow: -1px 1px 5px 0px rgba(117,112,117,1);
+    -moz-box-shadow: -1px 1px 5px 0px rgba(117,112,117,1);
+    box-shadow: -1px 1px 5px 0px rgba(117,112,117,1);
+}
+
+.myorder__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    align-content: center;
+}
+
+.myorder__title svg {
+    margin: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.myorder__title p {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.myorder__content--total {
+    background-color: var(--text-input-field);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 10px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}

@@ -18,11 +18,15 @@ export interface ProductItemProps {
     product?: {}
 }
 
-
 export interface LayoutProps {
     children: ReactNode 
 }
 
 export interface ClickProps {
     onClick?: () => void
+}
+
+export interface AppContextProps {
+    state?: any
+    addCart?: any
 }

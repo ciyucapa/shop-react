@@ -9,10 +9,12 @@ import AngleArrowDown from '../../assets/componentIcons/AngleArrowDown';
 import Menu from '../Menu/Menu';
 import { useContext } from 'react';
 import AppContext from '../../context';
+import MyOrder from '../../containers/MyOrder';
 
 const Header = () =>  {
     const {onVisible, visible} = useVisible();
-    const {state: {cart}} = useContext(AppContext)
+    const {state: {cart}} = useContext(AppContext);
+    const hookVisible = useVisible();
     
     return(
         <nav className='header__container'>
@@ -27,9 +29,12 @@ const Header = () =>  {
                     <AngleArrowDown onClick={onVisible}/>
                     {visible && <Menu/>}
                 </span>
-                <div className='header__cart'>
+                <div className='header__cart' onClick={hookVisible.onVisible}>
                     <ShoppingToCart/>
-                    <div className='header__cart--text'>{cart.length}</div>
+                    {cart.length > 0 ? <div className='header__cart--text'>{cart.length}</div> : null}
+                </div>
+                <div>
+                    {hookVisible.visible && <MyOrder/>}
                 </div>
             </div>
 

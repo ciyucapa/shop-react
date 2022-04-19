@@ -1,9 +1,5 @@
 import {createContext} from "react";
-
-interface AppContextProps {
-    state?: any
-    addCart?: any
-}
+import {AppContextProps} from '../interfaces'
 
 const AppContext = createContext<AppContextProps>({});
 
