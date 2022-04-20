@@ -7,7 +7,7 @@ import AppContext from '../context';
 import { ProductItemProps } from "../interfaces";
 
 const MyOrder = () => {
-    const {state} = useContext(AppContext);
+    const {state, calculateTotalCart, deleteCart} = useContext(AppContext);
 
     return (
         <aside className="container__myorder">
@@ -17,11 +17,18 @@ const MyOrder = () => {
             </div>
             <div className="myorder__content">
                 {state.cart.map( ({id, price, title, images}:ProductItemProps) => (
-                    <OrderItem id={id} images={images[0]} price={price} title={title} key={id} />
+                    <OrderItem 
+                        id={id} 
+                        images={images[0]} 
+                        price={price} 
+                        title={title} 
+                        key={id} 
+                        deleteC={() => deleteCart(id)} 
+                    />
                 ))}
                 <div className="myorder__content--total">
                     <p>Total</p>
-                    <p>$560.00</p>
+                    <p>$ {calculateTotalCart()}</p>
                 </div>
                 <ButtonField text="Checkout" isIcon={false}/>
             </div>

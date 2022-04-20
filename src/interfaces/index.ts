@@ -16,6 +16,7 @@ export interface ProductItemProps {
     title: string
     images: string
     product?: {}
+    deleteC?: () => void
 }
 
 export interface LayoutProps {
@@ -29,4 +30,10 @@ export interface ClickProps {
 export interface AppContextProps {
     state?: any
     addCart?: any
+    calculateTotalCart?: any
+    deleteCart?: any
+}
+
+export interface IPrice {
+    price : number
 }

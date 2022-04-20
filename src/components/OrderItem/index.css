@@ -23,3 +23,7 @@
     height: 70px;
     border-radius: 5px;
 }
+
+.orderItem__container--box svg {
+    margin-left: 0;
+}
