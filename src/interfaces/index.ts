@@ -17,6 +17,7 @@ export interface ProductItemProps {
     images: string
     product?: {}
     deleteC?: () => void
+    category?: ICategories
 }
 
 export interface LayoutProps {
@@ -36,4 +37,14 @@ export interface AppContextProps {
 
 export interface IPrice {
     price : number
+}
+
+export interface INavbar {
+    categories: ICategories[]
+}
+
+export interface ICategories {
+    id: number
+    name: string
+    image: string
 }

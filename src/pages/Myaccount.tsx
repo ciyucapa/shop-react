@@ -1,5 +1,8 @@
-const MyAccount = () => {
-    return <div>MyAccount</div>
+import MyAccount from "../components/MyAccount";
+
+const MyAccountContainer = () => {
+    
+    return <MyAccount/>
 }
 
-export default MyAccount
+export default MyAccountContainer

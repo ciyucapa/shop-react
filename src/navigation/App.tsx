@@ -6,13 +6,19 @@ import Header from '../components/Header/Header';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Checkout from '../pages/Checkout';
 import CreateAccount from '../pages/CreateAccount';
-import MyAccount from '../pages/Myaccount';
+import MyAccountContainer from '../pages/Myaccount';
 import Orders from '../pages/Orders';
 import SendEmails from '../pages/SendEmail';
 import NewPasswordContainer from '../pages/PasswordNew'
 import PasswordRecovery from '../pages/PasswordRecovery';
 import AppContext from '../context';
 import useInitialState from '../hooks/useInitialState';
+import OthersContainers from '../pages/OthersContainer';
+import ToysContainer from '../pages/ToysContainer';
+import ElectronicsContainer from '../pages/ElectronicsContainer';
+import ClothesContainer from '../pages/ClothesContainers';
+import FurnitureContainer from '../pages/FurnitureContainers';
+import ShoesContainer from '../pages/ShoesContainer';
 
 
 const Dashboard = () => {
@@ -28,10 +34,16 @@ const Dashboard = () => {
             <Route path='/recovery' element={<PasswordRecovery />} />
             <Route path='/checkout' element={<Checkout />} />
             <Route path='/create-account' element={<CreateAccount />} />
-            <Route path='/my-account' element={<MyAccount />} />
+            <Route path='/my-account' element={<MyAccountContainer />} />
             <Route path='/new-password' element={<NewPasswordContainer />} />
             <Route path='/orders' element={<Orders />} />
             <Route path='/send-email' element={<SendEmails />} />
+            <Route path='/Clothes' element={<ClothesContainer />} />
+            <Route path='/Electronics' element={<ElectronicsContainer />} />
+            <Route path='/Toys' element={<ToysContainer />} />
+            <Route path='/Others' element={<OthersContainers />} />
+            <Route path='/Furniture' element={<FurnitureContainer />} />
+            <Route path='/Shoes' element={<ShoesContainer />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         </Layout>

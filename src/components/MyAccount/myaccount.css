@@ -1,0 +1,46 @@
+.myaccount__container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+}
+
+.myaccount__container--box {
+    width: 20%;
+    padding-top: 100px;
+}
+
+.myaccount__title {
+    font-size: 22px;
+    font-weight: 800;
+    padding-bottom: 40px;
+}
+
+.myaccount__container--box form label {
+    font-size: var(--lg);
+    padding: 10px 0;
+}
+
+.myaccount__container--box form label input {
+    margin-top: 3px;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 5px;
+    outline: none;
+    background-color: var(--text-input-field);
+    color: gray;
+    font-size: var(--ss);
+}
+
+
+.myaccount__container--box form button {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--hospital-green);
+    color: white;
+    font-size: var(--md);
+    border: none;
+    width: 100%;
+    margin-top: 40px;
+}

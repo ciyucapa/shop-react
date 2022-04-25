@@ -1,11 +1,13 @@
 .login__container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px 0;
 }
 
 .login__container--box {
+    width: 20%;
+    padding-top: 100px;
     text-align: center;
 }
 
@@ -26,7 +28,7 @@
 
 .login__container--box form label {
     margin-bottom: 10px;
-    font-size: var(--ss);
+    font-size: var(--lg);
     font-weight: 600;
 }
 

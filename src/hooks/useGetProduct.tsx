@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import { ProductItemProps } from "../interfaces";
 
 const useGetProduct = () => {
     const API = 'https://api.escuelajs.co/api/v1/products';
@@ -21,8 +22,23 @@ const useGetProduct = () => {
         }
     })
 
+    const productCategoryClothes = product.filter(({category}: ProductItemProps) => category?.name === 'Clothes')
+    
+    const productCategoryElectronics = product.filter(({category}: ProductItemProps) => category?.name === 'Electronics')
+
+    const productCategoryFurniture = product.filter(({category}: ProductItemProps) => category?.name === 'Furniture')
+    
+    const productCategoryShoes = product.filter(({category}: ProductItemProps) => category?.name === 'Shoes')
+    
+    const productCategoryOthers = product.filter(({category}: ProductItemProps) => category?.name === 'Others')
+        
     return {
-        product
+        product,
+        productCategoryClothes,
+        productCategoryElectronics,
+        productCategoryFurniture,
+        productCategoryShoes,
+        productCategoryOthers
     }
 };
 

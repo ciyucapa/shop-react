@@ -1,4 +1,4 @@
-import '../../styles/login.css'
+import '../Login/login.css'
 
 const NewPassword = () => {
     return (

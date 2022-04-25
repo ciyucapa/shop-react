@@ -1,4 +1,4 @@
-import '../../styles/login.css';
+import './login.css';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
@@ -6,10 +6,10 @@ const Login = () => {
         <div className='login__container'>
             <div className='login__container--box'>
                 <form>
-                    <label>Email address
+                    <label className='login__label'>Email address
                         <input type="text" placeholder="email"/>
                     </label>
-                    <label>Password
+                    <label  className='login__label'>Password
                         <input type="text" placeholder="password"/>
                     </label>
                     <button type="submit">Login</button>

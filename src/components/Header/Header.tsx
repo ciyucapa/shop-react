@@ -1,6 +1,7 @@
 import './header.css'
 
 import useVisible from '../../hooks/useVisible';
+import useCategory from '../../hooks/useCategory';
 
 import Logo from '../atomos/Logo/Logo';
 import Navbar from '../atomos/Navbar/Navbar';
@@ -15,12 +16,13 @@ const Header = () =>  {
     const {onVisible, visible} = useVisible();
     const {state: {cart}} = useContext(AppContext);
     const hookVisible = useVisible();
+    const {categories} = useCategory();
     
     return(
         <nav className='header__container'>
             <div className='header__container--sectionone'>
                 <Logo/>
-                <Navbar/>
+                <Navbar categories={categories}/>
             </div>
             <div className='header__container--sectionthree'>
                 <span className='header__sign' >Sign in</span>
