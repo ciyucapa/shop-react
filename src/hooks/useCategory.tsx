@@ -15,9 +15,12 @@ const useCategory = () => {
         }
         getProduct()
     }, [])
+
+    const categoryName = categories.map((a: any) => a.name)
     
     return {
         categories,
+        categoryName
     };
 };
 

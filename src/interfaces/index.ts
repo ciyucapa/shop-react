@@ -1,5 +1,10 @@
 import {ReactNode} from 'react';
 
+export interface IProductosPlp {
+    categoryName: []
+    productCategoryShoes: ProductItemProps[]
+}
+
 export interface ProductListProps {
     products: ProductItemProps[]
 }

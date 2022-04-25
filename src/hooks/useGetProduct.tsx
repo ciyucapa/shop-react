@@ -20,6 +20,8 @@ const useGetProduct = () => {
         if(product.images[0]) {
             return product
         }
+
+        return []
     })
 
     const productCategoryClothes = product.filter(({category}: ProductItemProps) => category?.name === 'Clothes')

@@ -14,7 +14,6 @@ import PasswordRecovery from '../pages/PasswordRecovery';
 import AppContext from '../context';
 import useInitialState from '../hooks/useInitialState';
 import OthersContainers from '../pages/OthersContainer';
-import ToysContainer from '../pages/ToysContainer';
 import ElectronicsContainer from '../pages/ElectronicsContainer';
 import ClothesContainer from '../pages/ClothesContainers';
 import FurnitureContainer from '../pages/FurnitureContainers';
@@ -40,7 +39,6 @@ const Dashboard = () => {
             <Route path='/send-email' element={<SendEmails />} />
             <Route path='/Clothes' element={<ClothesContainer />} />
             <Route path='/Electronics' element={<ElectronicsContainer />} />
-            <Route path='/Toys' element={<ToysContainer />} />
             <Route path='/Others' element={<OthersContainers />} />
             <Route path='/Furniture' element={<FurnitureContainer />} />
             <Route path='/Shoes' element={<ShoesContainer />} />

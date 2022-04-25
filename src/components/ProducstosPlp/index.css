@@ -1,0 +1,14 @@
+.title {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.total {
+    padding: 20px 20px;
+    font-size: var(--lg);
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+}

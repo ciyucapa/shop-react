@@ -1,9 +1,15 @@
 import useGetProduct from "../hooks/useGetProduct";
-import ProductList from "../components/ProductList";
+import ProductsPlp from "../components/ProducstosPlp";
+import useCategory from "../hooks/useCategory";
 
 const FurnitureContainer = () => {
-    const {productCategoryFurniture} = useGetProduct()
-    return <ProductList products={productCategoryFurniture} />
+    const {productCategoryFurniture} = useGetProduct();
+    const {categoryName} = useCategory();
+
+    return <ProductsPlp 
+        categoryName={categoryName[2]} 
+        productCategoryShoes={productCategoryFurniture} 
+    />
 };
 
 export default FurnitureContainer;

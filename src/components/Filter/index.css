@@ -1,0 +1,28 @@
+.container {
+    width: 60%;
+    padding-left: 20px;
+}
+
+.container section .categoria {
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.container section a  {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: black;
+  margin: 5px 0;
+}
+
+.container section a span {
+    padding-left: 20px;
+    margin-right: 5px;
+}
+
+.container section .lenght{
+    color: gray;
+}
