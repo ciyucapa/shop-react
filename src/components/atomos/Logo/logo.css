@@ -13,6 +13,12 @@
     margin-right: 5px;
 }
 
+.logo__container a {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
 .logo__title--one {
     color: var(--hospital-green);
     margin-right: 10px;

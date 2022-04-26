@@ -2,17 +2,24 @@
 margin-left: 30px;
 }
 
-.navbar__container ul {
-   list-style: none;
+.navbar__container div {
    display: flex;
    flex-direction: row;
    align-items: center;
-   color: var(--very-light-pink);
 }
 
-.navbar__container ul li {
-    margin-right: 20px;
- }
+.navbar__container a {
+    margin-left: 20px;
+    text-decoration: none;
+    padding: 10px;
+    color: var(--very-light-pink);
+}
+
+.navbar__container a:hover {
+    background-color: var(--hospital-green);
+    color: #fff !important;
+    border-radius: 10px;
+}
 
 .navbar__list--one {
     border-radius: 10px;

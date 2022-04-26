@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 const Navbar = ({categories}: INavbar): JSX.Element => (
     <div className='navbar__container'>
-        <ul className='navbar__list'>
-            <li className='navbar__list--one'>All</li>
+        <div className='navbar__list'>
+            <div className='navbar__list--one'>All</div>
             {categories.map(({name, id}) => 
-                <Link to={name}><li className='navbar__list--two'key={id}>{name}</li></Link>
+                <Link to={name}><div className='navbar__list--two'key={id}>{name}</div></Link>
             )}
-        </ul>
+        </div>
     </div>
 )
 
