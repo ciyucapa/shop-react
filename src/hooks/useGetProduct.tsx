@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import axios from 'axios';
-import { ProductItemProps } from "../interfaces";
+import { ProductItemProps} from "../interfaces";
 
 const useGetProduct = () => {
     const API = 'https://api.escuelajs.co/api/v1/products';
+    
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -16,26 +17,28 @@ const useGetProduct = () => {
         getProduct()
     }, [])
 
-    const product = products.filter((product : any) => {
-        if(product.images[0]) {
-            return product
-        }
-
-        return []
-    })
-
-    const productCategoryClothes = product.filter(({category}: ProductItemProps) => category?.name === 'Clothes')
+    const productNuevo = useMemo(() => {
+        return products.filter((products : ProductItemProps) => {
+            if(products.images[0] && products.id) {
+                return products
+            }
     
-    const productCategoryElectronics = product.filter(({category}: ProductItemProps) => category?.name === 'Electronics')
+            return []
+        })
+    }, [products]);
+    
+    const productCategoryClothes = productNuevo.filter(({category}: ProductItemProps) => category?.name === 'Clothes');
+    
+    const productCategoryElectronics = productNuevo.filter(({category}: ProductItemProps) => category?.name === 'Electronics');
 
-    const productCategoryFurniture = product.filter(({category}: ProductItemProps) => category?.name === 'Furniture')
+    const productCategoryFurniture = productNuevo.filter(({category}: ProductItemProps) => category?.name === 'Furniture');
     
-    const productCategoryShoes = product.filter(({category}: ProductItemProps) => category?.name === 'Shoes')
+    const productCategoryShoes = productNuevo.filter(({category}: ProductItemProps) => category?.name === 'Shoes');
     
-    const productCategoryOthers = product.filter(({category}: ProductItemProps) => category?.name === 'Others')
+    const productCategoryOthers = productNuevo.filter(({category}: ProductItemProps) => category?.name === 'Others');
         
     return {
-        product,
+        productNuevo,
         productCategoryClothes,
         productCategoryElectronics,
         productCategoryFurniture,

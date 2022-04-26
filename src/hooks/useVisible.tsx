@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 const useVisible = () => {
-    const [visible, setVisible] = useState(false)
+    const [visible, setVisible] = useState(false);
 
     const onVisible = () => {
         setVisible(!visible)
@@ -9,7 +9,7 @@ const useVisible = () => {
 
     return {
         visible,
-        onVisible
+        onVisible,
     }
 }
 

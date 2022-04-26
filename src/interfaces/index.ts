@@ -2,11 +2,19 @@ import {ReactNode} from 'react';
 
 export interface IProductosPlp {
     categoryName: []
-    productCategoryShoes: ProductItemProps[]
+    productCategory?: ProductItemProps[]
+    catProductsOrder?: ProductItemProps[]
+    catProductOrderMayor?: ProductItemProps[]
+    visible: boolean
+    onVisible: () => void
+    onMayor: () => void
+    onMenor: () => void
+    menor: boolean
+    mayor: boolean
 }
 
 export interface ProductListProps {
-    products: ProductItemProps[]
+    products?: ProductItemProps[]
 }
 
 export interface ButtonProps {
@@ -52,4 +60,11 @@ export interface ICategories {
     id: number
     name: string
     image: string
+}
+
+export interface IOrderBy {
+    visible: boolean
+    onClick: () => void
+    onClickMenor: () => void
+    onClickMayor: () => void
 }
