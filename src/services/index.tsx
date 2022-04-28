@@ -3,6 +3,7 @@ import { IDataUsers } from "../interfaces";
 
 const API__USERS = 'https://api.escuelajs.co/api/v1/users';
 const API__PRODUCT = 'https://api.escuelajs.co/api/v1/products';
+const API_LOGIN = 'https://api.escuelajs.co/api/v1/auth/login';
 
 export const fetchDataUsers = async(dataUser: IDataUsers) => {
     try {
@@ -39,3 +40,13 @@ export const getUsers = async (setUsers: any) => {
         console.log(error);
     }
 };
+
+export const getLogin = async (credentials : IDataUsers) => {
+    try {
+        const {data} = await axios.post(API_LOGIN, credentials);
+        return data
+
+    } catch (error) {
+        console.log(error);
+    }
+}

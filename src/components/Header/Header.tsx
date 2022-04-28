@@ -11,12 +11,15 @@ import Menu from '../Menu/Menu';
 import { useContext } from 'react';
 import AppContext from '../../context';
 import MyOrder from '../../containers/MyOrder';
+import useForm from '../../hooks/useForm';
 
 const Header = () =>  {
     const {onVisible, visible} = useVisible();
     const {state: {cart}} = useContext(AppContext);
     const hookVisible = useVisible();
     const {categories} = useCategory();
+    const {valuesForm} = useForm()
+    console.log("ingreso", valuesForm)
     
     return(
         <nav className='header__container'>
