@@ -18,24 +18,14 @@ const useGetProduct = () => {
             return []
         })
     }, [products]);
-    
-    const productCategoryClothes = productNuevo.filter(({category}: ProductItemProps) => category?.name === 'Clothes');
-    
-    const productCategoryElectronics = productNuevo.filter(({category}: ProductItemProps) => category?.name === 'Electronics');
 
-    const productCategoryFurniture = productNuevo.filter(({category}: ProductItemProps) => category?.name === 'Furniture');
-    
-    const productCategoryShoes = productNuevo.filter(({category}: ProductItemProps) => category?.name === 'Shoes');
-    
-    const productCategoryOthers = productNuevo.filter(({category}: ProductItemProps) => category?.name === 'Others');
+    const productCategory = (categoria: string) => {
+        return productNuevo.filter(({category}: ProductItemProps) => category?.name === categoria);
+    }
         
     return {
         productNuevo,
-        productCategoryClothes,
-        productCategoryElectronics,
-        productCategoryFurniture,
-        productCategoryShoes,
-        productCategoryOthers
+        productCategory
     }
 };
 

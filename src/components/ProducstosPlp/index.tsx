@@ -14,22 +14,29 @@ const ProductsPlp = ({
     eleccion,
     onEleccionMenor,
     onEleccionMayor,
-}: IProductosPlp): JSX.Element => (
-    <div>
+}: IProductosPlp): JSX.Element => {
+    return (
         <div>
-            <h1 className='title'>{categoryName}</h1>
-            <p className='total'>{productCategory?.length} Resultados</p>
+            <div>
+                <h1 className='title'>{categoryName}</h1>
+                <p className='total'>{productCategory?.length} Resultados</p>
+            </div>
+            <div className='orderBy'>
+                <OrderBy 
+                    visible={visible} 
+                    onClick={onVisible} 
+                    onClickMayor={onEleccionMayor} 
+                    onClickMenor={onEleccionMenor} 
+                />
+            </div>
+            <div className='section'>
+                <Filter />
+                {!eleccion.menor && !eleccion.mayor && <ProductList products={productCategory} />}
+                {eleccion.menor && <ProductList products={catProductsOrder} />}
+                {eleccion.mayor && <ProductList products={catProductOrderMayor} />}
+            </div>
         </div>
-        <div className='orderBy'>
-            <OrderBy visible={visible} onClick={onVisible} onClickMayor={onEleccionMayor} onClickMenor={onEleccionMenor} />
-        </div>
-        <div className='section'>
-            <Filter />
-            {!eleccion.menor && !eleccion.mayor && <ProductList products={productCategory} />}
-            {eleccion.menor && <ProductList products={catProductsOrder} />}
-            {eleccion.mayor && <ProductList products={catProductOrderMayor} />}
-        </div>
-    </div>
-);
+    )
+};
 
 export default ProductsPlp;

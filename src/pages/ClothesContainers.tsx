@@ -6,15 +6,16 @@ import useVisible from "../hooks/useVisible";
 import useToggle from "../hooks/useToggle";
 
 const ClothesContainer = () => {
-    const {productCategoryClothes} = useGetProduct();
-    const {productCategoryClothes: productMenor} = useGetProduct();
-    const {productCategoryClothes: productMayor} = useGetProduct();
+    const {productCategory} = useGetProduct();
     const {categoryName} = useCategory();
     const {onVisible, visible} = useVisible();
     const {eleccion, onEleccionMayor, onEleccionMenor} = useToggle();
+    const productClothes = productCategory('Clothes')
+    const productClothesMenor = productCategory('Clothes')
+    const productClothesMayor = productCategory('Clothes');
 
-    productMenor.sort(productsMenor);
-    productMayor.sort(productsMayor)
+    productClothesMenor.sort(productsMenor);
+    productClothesMayor.sort(productsMayor)
     
     return <ProductsPlp 
         eleccion={eleccion}
@@ -23,9 +24,9 @@ const ClothesContainer = () => {
         onVisible={onVisible}
         visible={visible}
         categoryName={categoryName[0]} 
-        productCategory={productCategoryClothes}
-        catProductsOrder={productMenor}
-        catProductOrderMayor={productMayor}
+        productCategory={productClothes}
+        catProductsOrder={productClothesMenor}
+        catProductOrderMayor={productClothesMayor}
     />
 };
 
