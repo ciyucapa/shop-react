@@ -7,7 +7,7 @@ const Login = () => {
             <div className='login__container--box'>
                 <form>
                     <label className='login__label'>Email address
-                        <input type="text" placeholder="email"/>
+                        <input type="text" placeholder="email" />
                     </label>
                     <label  className='login__label'>Password
                         <input type="text" placeholder="password"/>

@@ -4,9 +4,9 @@ import useGetProduct from '../../hooks/useGetProduct';
 
 
 const Filter = () => {
-    const {categoryName} = useCategory();
+    const { categoryName } = useCategory();
     const {
-        productCategoryClothes, 
+        productCategoryClothes,
         productCategoryElectronics,
         productCategoryFurniture,
         productCategoryOthers,

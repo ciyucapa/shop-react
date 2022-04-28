@@ -35,9 +35,9 @@ const Header = () =>  {
                     <ShoppingToCart/>
                     {cart.length > 0 ? <div className='header__cart--text'>{cart.length}</div> : null}
                 </div>
-                <div>
+                <>
                     {hookVisible.visible && <MyOrder/>}
-                </div>
+                </>
             </div>
 
         </nav>

@@ -11,10 +11,9 @@ const ProductsPlp = ({
     catProductOrderMayor,
     onVisible,
     visible,
-    onMayor,
-    onMenor,
-    menor,
-    mayor
+    eleccion,
+    onEleccionMenor,
+    onEleccionMayor,
 }: IProductosPlp): JSX.Element => (
     <div>
         <div>
@@ -22,13 +21,13 @@ const ProductsPlp = ({
             <p className='total'>{productCategory?.length} Resultados</p>
         </div>
         <div className='orderBy'>
-            <OrderBy visible={visible} onClick={onVisible} onClickMayor={onMayor} onClickMenor={onMenor} />
+            <OrderBy visible={visible} onClick={onVisible} onClickMayor={onEleccionMayor} onClickMenor={onEleccionMenor} />
         </div>
         <div className='section'>
             <Filter />
-            {!menor && !mayor && <ProductList products={productCategory} />}
-            {menor && <ProductList products={catProductsOrder} />}
-            {mayor && <ProductList products={catProductOrderMayor} />}
+            {!eleccion.menor && !eleccion.mayor && <ProductList products={productCategory} />}
+            {eleccion.menor && <ProductList products={catProductsOrder} />}
+            {eleccion.mayor && <ProductList products={catProductOrderMayor} />}
         </div>
     </div>
 );

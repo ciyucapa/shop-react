@@ -7,8 +7,12 @@ export interface IProductosPlp {
     catProductOrderMayor?: ProductItemProps[]
     visible: boolean
     onVisible: () => void
-    onMayor: () => void
-    onMenor: () => void
+    eleccion: Ieleccion
+    onEleccionMenor: () => void
+    onEleccionMayor: () => void
+}
+
+export interface Ieleccion {
     menor: boolean
     mayor: boolean
 }
@@ -67,4 +71,13 @@ export interface IOrderBy {
     onClick: () => void
     onClickMenor: () => void
     onClickMayor: () => void
+}
+
+export interface IDataUsers {
+    id?: number
+    email: string
+    password: string
+    name: string
+    role: string
+    avatar: string
 }

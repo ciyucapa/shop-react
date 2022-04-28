@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { IPrice } from "../interfaces";
+import { IPrice, ProductItemProps } from "../interfaces";
 
 const initialValues: any = {
     cart: [],
 }
-
 
 const useInitialState = () => {
     const [state, setState] = useState(initialValues);
@@ -25,7 +24,7 @@ const useInitialState = () => {
     const deleteCart = (id: number) => {
         setState({
             ...state,
-            cart: state.cart.filter((product: any) => product.id !== id)
+            cart: state.cart.filter((product: ProductItemProps) => product.id !== id)
         })
     }
     

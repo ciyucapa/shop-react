@@ -1,25 +1,30 @@
-import { useState } from "react"
+import { useState } from "react";
+import {Ieleccion} from '../interfaces'
 
 const useToggle = () => {
-    const [menor, setMenor] = useState(false);
-    const [mayor, setMayor] = useState(false);
+    const [eleccion, setEleccion] = useState<Ieleccion>({
+        menor: false,
+        mayor: false
+    })
 
-    const onMenor = () => {
-        setMenor(true);
-        setMayor(false);
+    const onEleccionMenor = () => {
+        setEleccion({
+            menor: true,
+            mayor: false
+        })
     }
 
-    const onMayor = () => {
-        setMayor(true);
-        setMenor(false);
+    const onEleccionMayor = () => {
+        setEleccion({
+            mayor: true,
+            menor: false,
+        })
     }
-
 
     return {
-        onMayor,
-        onMenor,
-        menor,
-        mayor,
+        eleccion,
+        onEleccionMenor,
+        onEleccionMayor,
     }
 }
 

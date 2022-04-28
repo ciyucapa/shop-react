@@ -1,5 +1,3 @@
-import OrderItem from "../components/OrderItem/OrderItem"
-
 const Checkout = () => {
     return(
         <div>
