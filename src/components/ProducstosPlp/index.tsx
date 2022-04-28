@@ -5,7 +5,13 @@ import ProductList from '../ProductList'
 import { IProductosPlp } from '../../interfaces';
 
 const ProductsPlp = ({
+    productClothes,
+    productElectronics,
+    productFurniture,
+    productShoes,
+    productOthers,
     categoryName,
+    categoryName1,
     productCategory,
     catProductsOrder,
     catProductOrderMayor,
@@ -22,15 +28,22 @@ const ProductsPlp = ({
                 <p className='total'>{productCategory?.length} Resultados</p>
             </div>
             <div className='orderBy'>
-                <OrderBy 
-                    visible={visible} 
-                    onClick={onVisible} 
-                    onClickMayor={onEleccionMayor} 
-                    onClickMenor={onEleccionMenor} 
+                <OrderBy
+                    visible={visible}
+                    onClick={onVisible}
+                    onClickMayor={onEleccionMayor}
+                    onClickMenor={onEleccionMenor}
                 />
             </div>
             <div className='section'>
-                <Filter />
+                <Filter
+                    categoryName={categoryName1}
+                    productClothes={productClothes}
+                    productElectronics={productElectronics}
+                    productFurniture={productFurniture}
+                    productOthers={productOthers}
+                    productShoes={productShoes}
+                />
                 {!eleccion.menor && !eleccion.mayor && <ProductList products={productCategory} />}
                 {eleccion.menor && <ProductList products={catProductsOrder} />}
                 {eleccion.mayor && <ProductList products={catProductOrderMayor} />}

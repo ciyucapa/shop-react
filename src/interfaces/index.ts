@@ -1,7 +1,13 @@
 import {ReactNode} from 'react';
 
 export interface IProductosPlp {
-    categoryName: []
+    categoryName: string[]
+    categoryName1: string[]
+    productClothes: ProductItemProps[]
+    productElectronics: ProductItemProps[]
+    productFurniture: ProductItemProps[]
+    productShoes: ProductItemProps[]
+    productOthers: ProductItemProps[]
     productCategory?: ProductItemProps[]
     catProductsOrder?: ProductItemProps[]
     catProductOrderMayor?: ProductItemProps[]
@@ -80,4 +86,13 @@ export interface IDataUsers {
     name: string
     role: string
     avatar: string
+}
+
+export interface IFilter {
+    categoryName: string[]
+    productClothes?: ProductItemProps[]
+    productElectronics?: ProductItemProps[]
+    productFurniture?: ProductItemProps[]
+    productShoes?: ProductItemProps[]
+    productOthers?: ProductItemProps[]
 }
