@@ -5,8 +5,12 @@ import { getProduct } from '../services';
 const useGetProduct = () => {
     const [products, setProducts] = useState<ProductItemProps[]>([]);
 
+    const onProduct = (dataProduct: ProductItemProps[]) => {
+        setProducts(dataProduct)
+    }
+
     useEffect(() => {
-        getProduct(setProducts)
+        getProduct(onProduct)
     }, [])
 
     const productNuevo = useMemo(() => {

@@ -88,6 +88,11 @@ export interface IDataUsers {
     avatar: string
 }
 
+export interface ILoginUsers {
+    email: string
+    password: string
+}
+
 export interface IFilter {
     categoryName: string[]
     productClothes?: ProductItemProps[]

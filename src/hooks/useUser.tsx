@@ -5,8 +5,12 @@ import { IDataUsers } from "../interfaces";
 const useUser = () => {
     const [users, setUsers] = useState<IDataUsers[]>([]);
 
+    const changeUsers = (usersData: IDataUsers[] ) => {
+        setUsers(usersData)
+    }
+
     useEffect(() => {
-        getUsers(setUsers);
+        getUsers(changeUsers);
     }, [setUsers]);
 
     return {

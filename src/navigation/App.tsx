@@ -19,11 +19,10 @@ import ClothesContainer from '../pages/ClothesContainers';
 import FurnitureContainer from '../pages/FurnitureContainers';
 import ShoesContainer from '../pages/ShoesContainer';
 
-
 const Dashboard = () => {
-  const initialState = useInitialState();
+  const {addCart, calculateTotalCart, deleteCart, state} = useInitialState();
   return (
-    <AppContext.Provider value={initialState} >
+    <AppContext.Provider value={{addCart, calculateTotalCart, deleteCart, state}} >
       <BrowserRouter>
         <Layout>
           <Header />

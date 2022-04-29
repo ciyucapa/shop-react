@@ -1,6 +1,10 @@
 import './menu.css'
 
-const Menu = (): JSX.Element => (
+interface IMenu {
+    onClick: () => void
+}
+
+const Menu = ({onClick}: IMenu): JSX.Element => (
     <div className="menu__container">
         <div className="menu__list">
             <ul>
@@ -10,7 +14,7 @@ const Menu = (): JSX.Element => (
         </div>
         <div className='menu__sign'>
             <span className='menu__sign--border'></span>
-            <span>Sign out</span>
+            <span onClick={onClick}>Sign out</span>
         </div>
     </div>
 );
