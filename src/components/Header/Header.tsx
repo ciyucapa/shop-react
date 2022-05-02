@@ -12,6 +12,7 @@ import { useContext } from 'react';
 import AppContext from '../../context';
 import MyOrder from '../../containers/MyOrder';
 import useLogin from '../../hooks/useLogin';
+import { Link } from 'react-router-dom';
 
 const Header = () =>  {
     const {onVisible, visible} = useVisible();
@@ -29,7 +30,7 @@ const Header = () =>  {
                 <Navbar categories={categories}/>
             </div>
             <div className='header__container--sectionthree'>
-                {user === null ? <span className='header__sign' >Sign in</span> : (
+                {user === null ? <Link to={'/login'}><span className='header__sign'>Sign in</span></Link> : (
                     <span className='header__email'>
                     <p>cindycaceres134@gmail.com</p>
                     <AngleArrowDown onClick={onVisible}/>

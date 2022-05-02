@@ -8,6 +8,7 @@ const Login = () => {
     return (
         <div className='login__container'>
             <div className='login__container--box'>
+                <h1>Login</h1>
                 <form onSubmit={handleLogin}>
                     <label className='login__label'>Email address
                         <input type="text" placeholder="email" name="email" onChange={changeLogin} value={loginUser.email} />

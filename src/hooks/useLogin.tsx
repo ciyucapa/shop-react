@@ -28,7 +28,7 @@ const useLogin = () => {
         e.preventDefault()
         try {
             const users = await getLogin(loginUser)
-            navigate('/')
+        
             window.localStorage.setItem(
                 "loggueadUser", JSON.stringify(users)
             )
@@ -39,6 +39,8 @@ const useLogin = () => {
             })
 
             setUser(users);
+            navigate('/')
+            
         } catch (e) {
             console.log(e)
         }
