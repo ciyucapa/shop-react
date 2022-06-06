@@ -44,9 +44,11 @@ export const getUsers = async (changeUsers: (data: IDataUsers[]) => void) => {
 export const getLogin = async (credentials : ILoginUsers) => {
     try {
         const {data} = await axios.post(API_LOGIN, credentials);
+        alert("Bienvenido!!")
         return data
 
     } catch (error) {
         console.log(error);
+        alert("No estas registrado! Ups")
     }
 }

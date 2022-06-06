@@ -2,7 +2,7 @@ import './myaccount.css';
 import useForm from '../../hooks/useForm';
 
 const MyAccount = () => {
-    const {onSubmit, changeFormValues, valuesForm} = useForm()
+    const {onSubmit, changeFormValues, valuesForm} = useForm();
 
     return (
         <div className='myaccount__container'>

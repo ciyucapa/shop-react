@@ -111,3 +111,11 @@ export interface IFilter {
     visible?: boolean
     onClick1?: () => void
 }
+
+export interface AuthProps {
+    signup?: any
+    userRegister?: IDataUsers
+    login?: any
+    userLogin?: ILoginUsers
+    setUserLogin?: any
+}

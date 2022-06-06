@@ -1,8 +1,9 @@
-import { FormEvent, useState, ChangeEvent, useEffect } from 'react';
-import { getLogin } from "../services";
-import { ILoginUsers } from '../interfaces';
-import { useNavigate } from "react-router-dom";
+import { FormEvent, useState, ChangeEvent } from 'react';
 
+import { ILoginUsers } from '../interfaces';
+import {AuthContext} from '../context/authContext';
+import { useContext } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const useLogin = () => {
     const [loginUser, setLoginUser] = useState<ILoginUsers>({
@@ -10,15 +11,17 @@ const useLogin = () => {
         password: ''
     })
     const [user, setUser] = useState(null);
-    const navigate = useNavigate();
+    const {login, setUserLogin} = useContext(AuthContext);
+    const navigate = useNavigate()
+   
 
-    useEffect(() => {
+   /*useEffect(() => {
         const loggedUserJSON = window.localStorage.getItem('loggueadUser');
         if (loggedUserJSON) {
             const user = JSON.parse(loggedUserJSON)
             setUser(user)
         }
-    }, [])
+    }, [])*/
 
     const changeLogin = (e: ChangeEvent<HTMLInputElement>) => {
         setLoginUser({ ...loginUser, [e.target.name]: e.target.value })
@@ -27,29 +30,26 @@ const useLogin = () => {
     const handleLogin = async (e: FormEvent) => {
         e.preventDefault()
         try {
-            const users = await getLogin(loginUser)
-        
+            const users = await login(loginUser)
             window.localStorage.setItem(
                 "loggueadUser", JSON.stringify(users)
             )
-
-            setLoginUser({
-                email: '',
-                password: ''
-            })
-
-            setUser(users);
             navigate('/')
-            
+            setUser(users)
         } catch (e) {
             console.log(e)
         }
     }
 
     const handleLogout = () => {
-        setUser(null)
-        navigate('/login')
         window.localStorage.removeItem('loggueadUser')
+        setUser(null)
+        navigate('/login');
+        setUserLogin({
+            email: '',
+            password: ''
+        })
+
     }
 
     return {

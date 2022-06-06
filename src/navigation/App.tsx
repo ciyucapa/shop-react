@@ -18,11 +18,13 @@ import ElectronicsContainer from '../pages/ElectronicsContainer';
 import ClothesContainer from '../pages/ClothesContainers';
 import FurnitureContainer from '../pages/FurnitureContainers';
 import ShoesContainer from '../pages/ShoesContainer';
+import {AuthProvider} from '../context/authContext'
 
 const Dashboard = () => {
-  const {addCart, calculateTotalCart, deleteCart, state} = useInitialState();
+  const hook1 = useInitialState();
   return (
-    <AppContext.Provider value={{addCart, calculateTotalCart, deleteCart, state}} >
+    <AuthProvider>
+      <AppContext.Provider value={{...hook1}} >
       <BrowserRouter>
         <Layout>
           <Header />
@@ -46,6 +48,7 @@ const Dashboard = () => {
         </Layout>
       </BrowserRouter>
     </AppContext.Provider>
+    </AuthProvider>
 
   )
 }

@@ -31,6 +31,10 @@
     font-weight: 600;
 }
 
+.header__sign {
+    margin-left: 20px;
+}
+
 .header__container--sectionthree svg {
     fill: gray;
     width: 20px;

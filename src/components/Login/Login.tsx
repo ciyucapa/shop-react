@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import useLogin from '../../hooks/useLogin';
 
 const Login = () => {
-    const {changeLogin, loginUser, handleLogin} = useLogin()
-
+    const {changeLogin, loginUser, handleLogin} = useLogin();
     return (
         <div className='login__container'>
             <div className='login__container--box'>

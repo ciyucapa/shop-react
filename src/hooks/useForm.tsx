@@ -1,6 +1,9 @@
 import { useState, useMemo, ChangeEvent, FormEvent} from "react";
-import {fetchDataUsers} from '../services';
-import {IDataUsers} from '../interfaces'
+//import {fetchDataUsers} from '../services';
+import {IDataUsers} from '../interfaces';
+import {AuthContext} from '../context/authContext';
+import { useContext } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const useForm = () => {
     const [valuesForm, setValuesForm] = useState<IDataUsers>({
@@ -10,6 +13,10 @@ const useForm = () => {
         role: '',
         avatar: ''
     })
+
+    const navigate = useNavigate()
+    const {signup} = useContext(AuthContext);
+
 
     const changeFormValues = (event: ChangeEvent<HTMLInputElement>) => {
         setValuesForm({ ...valuesForm, [event.target.name]: event.target.value });
@@ -32,7 +39,12 @@ const useForm = () => {
     const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         resetForm();
-        fetchDataUsers(valuesForm);
+        try {
+            await signup(valuesForm)
+            navigate('/')
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     return {
