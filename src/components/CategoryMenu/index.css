@@ -15,6 +15,9 @@
 .category__aray {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
 }
 
 .category__image {
@@ -26,14 +29,31 @@
 .category__box {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 10px;
     align-items: center;
-    margin: 0px 30px;
+    margin: 20px;
+    background-color: var(--hospital-green);
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
 }
 
 
 .category__box a {
     text-decoration: none;
-    color: black;
+    color: #fff;
     font-size: 20px;
+}
+
+@media (max-width: 800px) {
+    .category__container  h1{
+        margin-bottom: 5px;
+        font-size: large;
+        padding: 10px;
+    }
+
+    .category__container {
+        margin-top: 30px;
+    }
 }

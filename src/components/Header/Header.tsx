@@ -18,16 +18,19 @@ const Header = () =>  {
     const {onVisible, visible} = useVisible();
     const {state: {cart}} = useContext(AppContext);
     const hookVisible = useVisible();
+    const hookVisibleNavbar = useVisible();
     const {categories} = useCategory();
-    const {user, handleLogout} = useLogin()
-    
-    console.log("userHeader", user)
+    const {user, handleLogout} = useLogin();
     
     return(
         <nav className='header__container'>
             <div className='header__container--sectionone'>
                 <Logo/>
-                <Navbar categories={categories}/>
+                <Navbar 
+                    categories={categories} 
+                    isVisible={hookVisibleNavbar.visible} 
+                    onClick={hookVisibleNavbar.onVisible}
+                />
             </div>
             <div className='header__container--sectionthree'>
                 {user === null ? <Link to={'/login'}><span className='header__sign'>Sign in</span></Link> : (
