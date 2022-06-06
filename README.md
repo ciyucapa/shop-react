@@ -11,17 +11,17 @@ Proyecto de tiendas ecommerce realizado con React.js / typescript
 ### Login
 Puedes usar alguno de estos usuarios para login
 
-*Usuario 1
-email: john@mail.com,
-password: changeme
+1. **Usuario** 1.<br>
+email: john@mail.com.<br>
+password: changeme.<br>
 
-*Usuario 2
-email: admin@mail.com,
-password: admin123
+2. **Usuario** 2.<br>
+email: admin@mail.com.<br>
+password: admin123.<br>
 
-*Usuario 3
-email: maria@mail.com,
-password: 12345,
+3. **Usuario** 3.<br>
+email: maria@mail.com.<br>
+password: 12345.<br>
 
 
 ### Dependencias
@@ -49,3 +49,18 @@ npm i
 
 ### Ejecución del proyecto
 npm start
+
+## Organización de los archivos
+Cuenta con diferentes modulos, los cuales son:
+
+**assets**
+**components**
+**containers**
+**context**
+**hooks**
+**interfaces**
+**navigation**
+**pages**
+**services**
+**styles**
+**utils**
