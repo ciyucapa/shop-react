@@ -2,6 +2,12 @@
 
 Proyecto de tiendas ecommerce realizado con React.js / typescript
 
+![crud](https://github.com/ciyucapa/shop-react/blob/main/src/assets/icons/prueba1.PNG)
+![crud](https://github.com/ciyucapa/shop-react/blob/main/src/assets/icons/prueba2.PNG)
+![crud](https://github.com/ciyucapa/shop-react/blob/main/src/assets/icons/prueba3.PNG)
+![crud](https://github.com/ciyucapa/shop-react/blob/main/src/assets/icons/prueba4.PNG)
+![crud](https://github.com/ciyucapa/shop-react/blob/main/src/assets/icons/prueba5.PNG)
+
 ### Login
 Puedes usar alguno de estos usuarios para login
 
