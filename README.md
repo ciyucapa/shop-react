@@ -53,14 +53,14 @@ npm start
 ## Organización de los archivos
 Cuenta con diferentes modulos, los cuales son:
 
-**assets**
-**components**
-**containers**
-**context**
-**hooks**
-**interfaces**
-**navigation**
-**pages**
-**services**
-**styles**
-**utils**
+**assets**<br>
+**components**<br>
+**containers**<br>
+**context**<br>
+**hooks**<br>
+**interfaces**<br>
+**navigation**<br>
+**pages**<br>
+**services**<br>
+**styles**<br>
+**utils**<br>
