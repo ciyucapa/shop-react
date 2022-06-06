@@ -88,5 +88,16 @@
 
     .header__container--sectionthree {
         margin-right: 10px;
+        padding: 0;
     }
+
+    .header__sign {
+        font-size: 12px !important;
+        margin-left: 10px;
+    }
+
+    .header__container--sectionthree svg {
+        margin-left: 8px;
+    }
+
   }
