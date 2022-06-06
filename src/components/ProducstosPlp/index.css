@@ -4,7 +4,7 @@
 }
 
 .total {
-    padding: 20px 20px;
+    padding: 20px;
     font-size: var(--lg);
 }
 
@@ -18,4 +18,23 @@
     flex-direction: column;
     text-align: right;
     padding-right: 20px;
+}
+
+@media (max-width: 800px) {
+    .section {
+        flex-direction: column;
+    }
+
+    .title {
+       padding-top: 20px;
+       padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .total {
+        padding: 10px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
 }

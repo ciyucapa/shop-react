@@ -13,6 +13,8 @@ export interface IProductosPlp {
     catProductOrderMayor?: ProductItemProps[]
     visible: boolean
     onVisible: () => void
+    visible1: boolean
+    onVisible1: () => void
     eleccion: Ieleccion
     onEleccionMenor: () => void
     onEleccionMayor: () => void
@@ -106,4 +108,6 @@ export interface IFilter {
     productFurniture?: ProductItemProps[]
     productShoes?: ProductItemProps[]
     productOthers?: ProductItemProps[]
+    visible?: boolean
+    onClick1?: () => void
 }

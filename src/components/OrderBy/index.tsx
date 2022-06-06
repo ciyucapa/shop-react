@@ -4,9 +4,9 @@ import { IOrderBy } from '../../interfaces'
 
 const OrderBy = ({ visible, onClick, onClickMayor, onClickMenor}: IOrderBy) : JSX.Element => (
     <>
-        <div className="orderby__container" onClick={onClick}>
+        <div className="orderby__container">
             <p>Order by:</p>
-            <AngleArrowDown />
+            <AngleArrowDown onClick={onClick} />
         </div>
         {visible && (
             <div className="orderby_list--menu">

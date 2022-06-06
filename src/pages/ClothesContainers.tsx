@@ -9,6 +9,7 @@ const ClothesContainer = () => {
     const { productCategory } = useGetProduct();
     const { categoryName } = useCategory();
     const { onVisible, visible } = useVisible();
+    const hook1 = useVisible();
     const { eleccion, onEleccionMayor, onEleccionMenor } = useToggle();
     const productClothes = productCategory('Clothes')
     const productClothesMenor = productCategory('Clothes')
@@ -37,6 +38,8 @@ const ClothesContainer = () => {
         productCategory={productClothes}
         catProductsOrder={productClothesMenor}
         catProductOrderMayor={productClothesMayor}
+        onVisible1={hook1.onVisible}
+        visible1={hook1.visible}
     />
 };
 

@@ -15,7 +15,6 @@
 }
 
 .orderby_list--menu {
-    border-radius: 5px;
     background-color: #fff;
     width: 150px;
     height: 100px;
@@ -23,8 +22,10 @@
     flex-direction: column;
     padding: 15px;
     position: absolute;
-    right: 20px;
-    top: 310px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    right: 0px;
+    top: 325px;
     -webkit-box-shadow: -1px 1px 5px 0px rgba(117,112,117,1);
     -moz-box-shadow: -1px 1px 5px 0px rgba(117,112,117,1);
     box-shadow: -1px 1px 5px 0px rgba(117,112,117,1);
@@ -39,4 +40,16 @@
     background-color: var(--hospital-green);
     border-radius: 5px;
     color: #fff;
+}
+
+@media (max-width: 800px) {
+    .orderby_list--menu {
+        top: 195px;
+        width: 130px;
+        font-size: 14px;
+    }
+
+    .orderby__container p {
+        font-size: 16px;
+    }
 }
