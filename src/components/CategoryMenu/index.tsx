@@ -9,7 +9,7 @@ const CategoryMenu = ({ categories }: ICategoryMenu) => (
             {categories.map(({ name, id, image }) => (
                 <div key={id}>
                     <span className="category__box" >
-                        <img src={image} className="category__image" />
+                        <img src={image} className="category__image" alt="imagenprueba" />
                         <Link to={name}><p>{name}</p></Link>
                     </span>
                 </div>
